@@ -27,6 +27,9 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Checkout from "./pages/Checkout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -35,6 +38,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   );
