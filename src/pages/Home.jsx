@@ -8,16 +8,22 @@ function Home() {
   return (
     <div>
      
-      <h1>🎂 케이크 목록</h1>    
-      <Link to="/cart">🛒 장바구니 가기</Link>
+     
+      <h1 className="flex justify-center">🎂 케이크 목록</h1> 
+      <div></div>  
+      <Link to="/cart"></Link>
 
-      <div classclassName="cake-list">
+      <div className="flex justify-center py-10 px-10">
           {products.map((item) => (
             <Link key={item.id} to={`/product/${item.id}`}>
               <Card title={item.title} image={item.image} id={item.id}/>
             </Link>
           ))}
       </div>
+
+      <div className="p-10 bg-yellow-100 text-2xl text-center">
+        🎉 Tailwind 작동 중!
+      </div>  
      
     </div>
   );
