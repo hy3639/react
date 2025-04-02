@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "../components/Button";
+
 
 
 function LikeButton(){
@@ -10,8 +12,10 @@ function LikeButton(){
 
     return (
       <div>
-            {cnt > 0 && <p>좋아요: {cnt}개</p>}
-            <button onClick={handleClick}>좋아요추가</button>       
+           
+            {/* <button>좋아요추가</button>        */}
+            <p>좋아요: {cnt}개</p>
+            <Button onClick={handleClick} color="primary" size="lg">좋아요</Button>
       </div>
 
     );

@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"; //주소값 읽는 hook
 import { useState } from "react";
 import products from "../data/products"; //전체상품 데이터
 import LikeButton from "../components/LikeButton";
+import Button from "../components/Button";
 
 function ProductDetail() {
     const { id } = useParams(); // url의 id 가져오기
@@ -19,17 +20,19 @@ function ProductDetail() {
     };
 
     return (
-    <div class="cake-detail">
-        <h2>{product.id}번째 케이크는 {product.title}입니다.</h2>
+    <div className="cake-detail">
+        <h2 className="font-mono text-xl">{product.id}번째 케이크는 {product.title}입니다.</h2>
         <img src={product.image} alt={product.title} width="300" />
         <p>{product.description}</p>
 
         {/* 수량출력 */}
-        {quantity > 0 && <p>🧺현재 수량: {quantity}개</p>}
+        <div className="p-8">
+            {quantity > 0 ?  <p>🧺현재 수량: {quantity}개</p> : <p>🧺현재 수량 0개</p>}
+            <Button onClick={handleClick} color="gray" size="lg">{quantity > 0 ? "🛒 추가 담기" : "장바구니 담기"}</Button>
+        </div>
+        
 
-        <button onClick={handleClick}>
-            {quantity > 0 ? "🛒 추가 담기" : "장바구니 담기"}
-        </button>
+        
 
         <LikeButton />
     </div>

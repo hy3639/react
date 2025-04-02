@@ -14,7 +14,18 @@
 .cake-list {
   display: flex;
 }
+.cake-list .card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cake-list .card img {
+  width: 100%;
+}
+/* .cake-list img {display:inline-block} */
 
 .cake-detail {
 text-align: center;
 }
+.cake-detail img {display:inline-block}
