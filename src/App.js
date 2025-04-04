@@ -24,6 +24,7 @@
 
 // export default App;
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
@@ -33,13 +34,18 @@ import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const handleAddToCart = (product)=> {
+    setCartItems((prev)=> [...prev, product]);
+    console.log(cartItems);
+  };
   return (
     <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/product/:id" element={<ProductDetail handleAddToCart={handleAddToCart}/>} />
+          <Route path="/cart" element={<Cart items={cartItems}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<NotFound />} />
