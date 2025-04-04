@@ -1,10 +1,19 @@
-function Card({id, title, image}){
-    return (
-        <div className="card">
-            <img src={image} alt={title} />
-            <p>{id}번째 {title}</p>
-        </div>
-    );
-}
+// src/components/Card.jsx
 
-export default Card;
+function Card({ title, image, price }) {
+    console.log(price);
+    return (
+        //  className="w-full h-[180px] object-cover" 
+      <div className="bg-white shadow rounded overflow-hidden hover:shadow-lg transition"> 
+        <img src={image} alt={title} className="w-48 h-48 object-cover"/>
+        <div className="p-4 text-center">
+          <h2 className="text-lg font-semibold mb-2">{title}</h2>
+          {price && <p className="text-gray-600 font-medium">{price.toLocaleString()}원</p>}
+        </div>
+      </div>
+    );
+  }
+  
+  
+  export default Card;
+  

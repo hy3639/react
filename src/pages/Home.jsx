@@ -14,17 +14,17 @@ function Home() {
         
       <Link to="/cart"></Link>
 
-      <div className="cake-list flex justify-center py-10 px-10">
+      <div className="cake-list flex justify-center py-10 px-10 gap-4">
           {products.map((item) => (
             <Link key={item.id} to={`/product/${item.id}`}>
-              <Card title={item.title} image={item.image} id={item.id}/>
+              <Card title={item.title} image={item.image} id={item.id} price={item.price}/>
             </Link>
           ))}
       </div>
 
-      <NoticeBox bg="bg-yellow-500" text="text-red" padding="p-5">
+      {/* <NoticeBox bg="bg-yellow-500" text="text-red" padding="p-5">
         케이크를 선택해 보세요.
-      </NoticeBox>
+      </NoticeBox> */}
 
       {/* <div className="p-10 bg-yellow-100 text-2xl text-center">
         🎉 Tailwind 작동 중!
