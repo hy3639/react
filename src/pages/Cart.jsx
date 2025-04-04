@@ -1,7 +1,7 @@
 function Cart({ items }) {
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">🛒 장바구니</h2>
+    <div className="p-6 text-center">
+      <h2 className="text-2xl font-bold mb-4">🛒 장바구니</h2>
       {items.length === 0 ? (
         <p>장바구니가 비어있어요.</p>
       ) : (
