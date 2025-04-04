@@ -21,20 +21,20 @@ function ProductDetail() {
 
     return (
     <div className="cake-detail">
-        <h2 className="font-mono text-xl">{product.id}번째 케이크는 {product.title}입니다.</h2>
-        <img src={product.image} alt={product.title} width="300" />
-        <p>{product.description}</p>
+        <h2 className="text-xl mb-8">{product.id}번째 케이크는 {product.title}입니다.</h2>
+        <img src={product.image} alt={product.title} className="w-[40%] object-cover" />
+        <p className="mt-4 mb-4">{product.description}</p>
 
-        {/* 수량출력 */}
-        <div className="p-8">
-            {quantity > 0 ?  <p>🧺현재 수량: {quantity}개</p> : <p>🧺현재 수량 0개</p>}
-            <Button onClick={handleClick} color="gray" size="lg">{quantity > 0 ? "🛒 추가 담기" : "장바구니 담기"}</Button>
+
+        <div className="flex items-center justify-center gap-4">
+             {/* 수량출력 */}
+            <div className="">
+                {quantity > 0 ?  <p>🧺현재 수량: {quantity}개</p> : <p>🧺현재 수량 0개</p>}
+                <Button onClick={handleClick} color="gray" size="lg">{quantity > 0 ? "🛒 추가 담기" : "장바구니 담기"}</Button>
+            </div>
+            <LikeButton />
         </div>
-        
-
-        
-
-        <LikeButton />
+       
     </div>
 ) ;
 }
