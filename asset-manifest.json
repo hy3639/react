@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.eb044ac5.css",
-    "main.js": "/react/static/js/main.bc88ba2b.js",
+    "main.css": "/react/static/css/main.9ba985f6.css",
+    "main.js": "/react/static/js/main.648daefd.js",
     "static/js/453.ed3810f9.chunk.js": "/react/static/js/453.ed3810f9.chunk.js",
     "static/media/cake-logo2.png": "/react/static/media/cake-logo2.8dcfd6d574a3361741a6.png",
     "index.html": "/react/index.html",
-    "main.eb044ac5.css.map": "/react/static/css/main.eb044ac5.css.map",
-    "main.bc88ba2b.js.map": "/react/static/js/main.bc88ba2b.js.map",
+    "main.9ba985f6.css.map": "/react/static/css/main.9ba985f6.css.map",
+    "main.648daefd.js.map": "/react/static/js/main.648daefd.js.map",
     "453.ed3810f9.chunk.js.map": "/react/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb044ac5.css",
-    "static/js/main.bc88ba2b.js"
+    "static/css/main.9ba985f6.css",
+    "static/js/main.648daefd.js"
   ]
 }
