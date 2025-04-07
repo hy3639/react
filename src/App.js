@@ -32,6 +32,7 @@ import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
+import TestTab from "./pages/TestTab";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -48,6 +49,7 @@ function App() {
           <Route path="/cart" element={<Cart items={cartItems}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/tabs" element={<TestTab />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
